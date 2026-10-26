@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Shonu ❤️</title>
+<style>
+  :root{
+    --wine:#3b0715; --red:#8f102c; --rose:#d82e52; --pink:#ffb5c4;
+    --cream:#fff3ee; --gold:#ffd58a; --glass:rgba(255,245,245,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--cream); font-family:Georgia,"Times New Roman",serif;
+    background:radial-gradient(ellipse at top,#8e1735 0%,#4b0a20 48%,#21040e 100%);
+    min-height:100vh; overflow-x:hidden;
+  }
+  button{font:inherit; cursor:pointer}
+  .ambient{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+  .float-heart{position:absolute;bottom:-50px;opacity:.35;animation:floatUp linear infinite;color:#ff9aae}
+  @keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+  .wrap{position:relative;z-index:1;width:min(1000px,92%);margin:auto}
+  .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:42px 0}
+  .hero-card{max-width:760px;padding:clamp(24px,5vw,54px);border:1px solid rgba(255,213,138,.45);
+    background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035));border-radius:30px;
+    box-shadow:0 25px 80px #16020a80;backdrop-filter:blur(8px)}
+  .eyebrow{letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font:600 .75rem Arial,sans-serif}
+  h1{font-size:clamp(2.7rem,9vw,6rem);line-height:.98;margin:20px 0;color:#fff0f2;font-weight:normal}
+  h1 span{display:block;color:var(--pink);font-style:italic}
+  .subtitle{font-size:clamp(1rem,2.7vw,1.3rem);line-height:1.8;color:#ffe0e5}
+  .countdown{display:flex;gap:10px;justify-content:center;align-items:center;margin:26px 0;flex-wrap:wrap}
+  .count-num{font-size:clamp(2rem,7vw,3.4rem);color:var(--gold);min-width:2ch}
+  .primary,.secondary,.letter-btn{
+    border:0;border-radius:999px;padding:14px 23px;font-weight:bold;transition:transform .2s,filter .2s;
+  }
+  .primary{background:linear-gradient(100deg,#ffd58a,#ff9dad);color:#4a0719;box-shadow:0 8px 25px #ff729244}
+  .secondary,.letter-btn{background:#ffffff12;color:#fff0f2;border:1px solid #ffb5c488}
+  button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .hidden{display:none!important}
+  section{padding:76px 0}
+  .section-title{text-align:center;font-size:clamp(2rem,6vw,3.6rem);font-weight:normal;margin:0 0 12px}
+  .section-title em{color:var(--pink)}
+  .section-intro{text-align:center;color:#f8cbd4;line-height:1.7;max-width:650px;margin:0 auto 34px}
+  .divider{text-align:center;color:var(--gold);font-size:1.6rem;letter-spacing:.4em;margin:12px 0}
+  .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .polaroid{background:#fff5f0;color:#6b122a;padding:12px 12px 18px;transform:rotate(var(--tilt));box-shadow:0 14px 30px #15020b55}
+  .photo{height:245px;background:linear-gradient(145deg,#ffd0d9,#9f2344);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#72152d}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-placeholder{padding:15px;font: .9rem Arial,sans-serif;line-height:1.6}
+  .caption{text-align:center;padding-top:12px;font-style:italic}
+  .letter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .letter-btn{width:100%;min-height:100px;border-radius:18px;line-height:1.5}
+  .letter-btn span{display:block;font-size:1.6rem;margin-bottom:5px}
+  .letter-content{margin-top:20px;padding:clamp(20px,4vw,34px);background:#fff2ed;color:#5a0b20;border-radius:22px;line-height:1.9;box-shadow:0 15px 35px #17020a44}
+  .letter-content h3{font-size:1.8rem;font-weight:normal;margin-top:0}
+  .letter-content p{white-space:pre-line}
+  .surprise-box{max-width:700px;margin:auto;text-align:center;padding:clamp(22px,5vw,45px);border:1px dashed #ffb5c4;border-radius:24px;background:#ffffff08}
+  .surprise-message{font-size:clamp(1.2rem,3.6vw,1.7rem);line-height:1.8;color:#ffe4e9;margin-top:22px}
+  .button-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .reaction{min-height:30px;color:var(--gold);font-size:1.15rem;margin-top:16px}
+  .cake-wrap{text-align:center}
+  .cake{position:relative;width:190px;height:150px;margin:30px auto 20px;cursor:pointer;filter:drop-shadow(0 12px 18px #17020a66)}
+  .cake-base{position:absolute;bottom:0;left:10px;width:170px;height:80px;background:linear-gradient(#ff9eaf,#d82e52);border-radius:12px 12px 18px 18px;border-bottom:8px solid #9e1737}
+  .icing{position:absolute;left:10px;bottom:57px;width:170px;height:35px;background:#ffe6df;border-radius:15px 15px 10px 10px}
+  .icing:after{content:"";position:absolute;left:20px;right:20px;bottom:-15px;height:22px;background:radial-gradient(circle at 12px 0,#ffe6df 14px,transparent 15px) 0 0/34px 24px repeat-x}
+  .candle{position:absolute;left:88px;bottom:90px;width:14px;height:42px;border-radius:4px;background:repeating-linear-gradient(45deg,#fff0c5 0 7px,#ff7994 7px 14px);z-index:2}
+  .flame{position:absolute;left:85px;bottom:130px;width:20px;height:28px;background:radial-gradient(ellipse at 50% 65%,#fff7b0 0 20%,#ffb52e 45%,#ff572b 70%,transparent 72%);border-radius:50% 50% 45% 45%;animation:flicker .7s infinite alternate;transform-origin:bottom}
+  @keyframes flicker{to{transform:rotate(5deg) scale(.9);opacity:.8}}
+  .cake.blown .flame{display:none}
+  footer{text-align:center;padding:35px 0 55px;color:#f3b9c5;font-size:.95rem}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff3ee;color:#6b1028;padding:13px 20px;border-radius:999px;box-shadow:0 10px 30px #0004;z-index:5;text-align:center;max-width:90%;animation:pop .25s ease-out}
+  @keyframes pop{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+  .confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:10;pointer-events:none;animation:fall linear forwards}
+  @keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:.8}}
+  @media(max-width:700px){.photo-grid{grid-template-columns:1fr;max-width:340px;margin:auto}.photo{height:300px}.polaroid{transform:rotate(0deg)}.letter-grid{grid-template-columns:1fr}.letter-btn{min-height:78px}.hero-card{border-radius:22px}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="ambient" id="ambient" aria-hidden="true"></div>
+
+<header class="hero wrap">
+  <div class="hero-card">
+    <div class="eyebrow">A little universe made just for you</div>
+    <h1>Happy Birthday,<span>Shonu ❤️</span></h1>
+    <p class="subtitle">To my favourite person, my comfort, my smile…<br>today, the whole little universe celebrates <em>you</em>.</p>
+    <div id="countdownArea">
+      <div class="eyebrow">Your surprise opens in</div>
+      <div class="countdown"><span class="count-num" id="countNum">10</span><span>seconds of suspense… 💌</span></div>
+      <p class="subtitle" style="font-size:1rem">Get ready, birthday boy. This one's from my heart.</p>
+    </div>
+    <button class="primary" id="openBtn" disabled>Opening your surprise… ❤️</button>
+    <p style="font: .8rem Arial,sans-serif;color:#f5b8c5;margin-top:18px">Made with love, just for Shonu</p>
+  </div>
+</header>
+
+<main id="mainContent" class="hidden">
+  <section class="wrap" id="memories">
+    <h2 class="section-title">Our little <em>love story</em> 📸</h2>
+    <p class="section-intro">Every picture has a feeling, every memory has a piece of my heart. Replace these placeholders with your favourite photos together.</p>
+    <div class="photo-grid">
+      <div class="polaroid" style="--tilt:-2deg"><div class="photo"><div class="photo-placeholder">📷<br><strong>Our favourite photo</strong><br>Replace with photo 1</div></div><div class="caption">My favourite view is you.</div></div>
+      <div class="polaroid" style="--tilt:1.5deg"><div class="photo"><div class="photo-placeholder">💗<br><strong>A happy memory</strong><br>Replace with photo 2</div></div><div class="caption">One memory, a million smiles.</div></div>
+      <div class="polaroid" style="--tilt:-1deg"><div class="photo"><div class="photo-placeholder">🌹<br><strong>Just us</strong><br>Replace with photo 3</div></div><div class="caption">Us, in my favourite little world.</div></div>
+    </div>
+    <p class="section-intro" style="margin-top:24px;font-size:.9rem">Tip: In the HTML, replace each photo placeholder with <code>&lt;img src="your-photo.jpg" alt="Our memory"&gt;</code> and keep the image file beside this HTML file.</p>
+  </section>
+
+  <section class="wrap" id="letters">
+    <h2 class="section-title">Open when you need <em>love</em> 💌</h2>
+    <p class="section-intro">Choose an envelope, jaan. Each one has a tiny piece of my heart inside.</p>
+    <div class="letter-grid">
+      <button class="letter-btn" data-letter="miss"><span>💌</span>Open when you miss me</button>
+      <button class="letter-btn" data-letter="sad"><span>🫂</span>Open when you feel low</button>
+      <button class="letter-btn" data-letter="love"><span>❤️</span>Open just because</button>
+    </div>
+    <article class="letter-content hidden" id="letterContent" aria-live="polite"><h3 id="letterTitle"></h3><p id="letterText"></p></article>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">A secret, just for <em>you</em> 🤫</h2>
+    <p class="section-intro">There's one more thing I wanted to tell you… tap to unlock it.</p>
+    <div class="surprise-box">
+      <div style="font-size:3rem">🎁</div>
+      <button class="primary" id="secretBtn">Unlock my secret message 💗</button>
+      <div class="surprise-message hidden" id="secretMessage">Shonu, if I could make one wish for your birthday, it would be that life gives you the same happiness, peace, and love that you bring into my world. I'm so proud of you, and I'm always cheering for you. Tum mere liye bohot special ho — today, tomorrow, and in all the little moments in between. ❤️</div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Sending you <em>all my love</em> 💋</h2>
+    <p class="section-intro">Distance can't stop a little virtual affection. Pick your birthday delivery!</p>
+    <div class="button-row">
+      <button class="primary" id="kissBtn">Send a kiss 💋</button>
+      <button class="secondary" id="hugBtn">Send the biggest hug 🫂</button>
+    </div>
+    <div class="reaction" id="reaction" aria-live="polite"></div>
+  </section>
+
+  <section class="wrap cake-wrap">
+    <h2 class="section-title">Make a birthday <em>wish</em> 🎂</h2>
+    <p class="section-intro">Tap the cake to blow out the candle, make a wish, and let the birthday magic begin.</p>
+    <div class="cake" id="cake" role="button" tabindex="0" aria-label="Blow out the birthday candle">
+      <div class="flame"></div><div class="candle"></div><div class="icing"></div><div class="cake-base"></div>
+    </div>
+    <button class="primary" id="wishBtn">Blow the candle & celebrate! 🎉</button>
+    <p class="subtitle" id="wishText" style="font-size:1.1rem;margin-top:22px">Close your eyes and make a wish, birthday boy. ✨</p>
+  </section>
+
+  <section class="wrap" id="music">
+    <h2 class="section-title">Our little <em>soundtrack</em> 🎶</h2>
+    <p class="section-intro">Add your favourite romantic Bollywood song below. Browsers usually need a tap before music can play.</p>
+    <div class="surprise-box">
+      <p>🎵 <strong>Our song, our moment</strong></p>
+      <!-- EDIT THIS: place your legally obtained MP3 file beside index.html and rename it romantic-song.mp3 -->
+      <audio id="loveSong" controls loop preload="none">
+        <source src="romantic-song.mp3" type="audio/mpeg">
+        Your browser does not support audio. Add a supported song file beside this HTML.
+      </audio>
+      <p style="font: .85rem Arial,sans-serif;color:#f6c2cd;line-height:1.6">To use your song, save an MP3 you have permission to use in the same folder as this file and name it <code>romantic-song.mp3</code>. Or replace the source filename in the code. The song is a placeholder, not included.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">Made with a little shyness, a lot of love, and endless hearts. ❤️<br><span style="font-size:1.2rem">Happy Birthday, Shonu. Always be happy. 🌹</span></footer>
+
+<script>
+  // Countdown: starts at 10 seconds, then reveals the full surprise.
+  const countNum = document.getElementById('countNum');
+  const openBtn = document.getElementById('openBtn');
+  const mainContent = document.getElementById('mainContent');
+  let seconds = 10;
+  const countdown = setInterval(() => {
+    seconds -= 1;
+    countNum.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(countdown);
+      document.getElementById('countdownArea').innerHTML = '<div class="eyebrow">Surprise unlocked!</div><p class="subtitle">All this love is waiting for you. ❤️</p>';
+      openBtn.disabled = false;
+      openBtn.textContent = 'Open my heart ❤️';
+      openBtn.classList.add('primary');
+      openBtn.onclick = () => {
+        mainContent.classList.remove('hidden');
+        openBtn.textContent = 'Your surprise is open 💖';
+        openBtn.disabled = true;
+        document.getElementById('memories').scrollIntoView({behavior:'smooth'});
+        burstConfetti(90);
+      };
+    }
+  }, 1000);
+
+  // Floating hearts in the background.
+  const ambient = document.getElementById('ambient');
+  const heartChars = ['♥','♡','❤','💕'];
+  for (let i=0;i<24;i++) {
+    const heart = document.createElement('span');
+    heart.className = 'float-heart';
+    heart.textContent = heartChars[Math.floor(Math.random()*heartChars.length)];
+    heart.style.left = Math.random()*100 + '%';
+    heart.style.fontSize = (14+Math.random()*25) + 'px';
+    heart.style.animationDuration = (9+Math.random()*13) + 's';
+    heart.style.animationDelay = (-Math.random()*18) + 's';
+    ambient.appendChild(heart);
+  }
+
+  // Editable romantic letters.
+  const letters = {
+    miss: {
+      title: 'When you miss me 💌',
+      text: 'Mere pyaare Shonu,\\n\\nAgar main abhi tumhare paas hoti, toh tumhe ek tight hug deti and tumhe jaane hi nahi deti. Until then, imagine me holding your hand and smiling at you. No matter how busy life gets, there is always a little corner of my heart that is yours.\\n\\nMissing you extra today. Sending a thousand kisses your way. ❤️'
+    },
+    sad: {
+      title: 'When the world feels heavy 🫂',
+      text: 'Baby, take a breath. You do not have to have everything figured out all the time. I hope you remember how capable, kind, and special you are. I believe in you, even on the days when you find it hard to believe in yourself.\\n\\nTum akele nahi ho, okay? I am cheering for you, one step at a time. You deserve softness, peace, and so much happiness. ❤️'
+    },
+    love: {
+      title: 'Just because I love you ❤️',
+      text: 'Shonu, you make ordinary moments feel a little more special. It is not just the big things; it is the little smiles, silly conversations, and the comfort of knowing you are you.\\n\\nI might not always find the perfect words, but I hope you never doubt this: you matter to me, you make me happy, and I am grateful for every sweet memory we get to make. Meri taraf se ek big hug aur lots of pyaar. 💋'
+    }
+  };
+  document.querySelectorAll('[data-letter]').forEach(button => {
+    button.addEventListener('click', () => {
+      const letter = letters[button.dataset.letter];
+      document.getElementById('letterTitle').textContent = letter.title;
+      document.getElementById('letterText').textContent = letter.text.replace(/\\n/g, '\n');
+      const content = document.getElementById('letterContent');
+      content.classList.remove('hidden');
+      content.scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+  });
+
+  // Secret message.
+  document.getElementById('secretBtn').addEventListener('click', () => {
+    document.getElementById('secretMessage').classList.remove('hidden');
+    document.getElementById('secretBtn').textContent = 'A secret from my heart ❤️';
+    burstConfetti(45);
+  });
+
+  // Kiss and hug interactions.
+  const reaction = document.getElementById('reaction');
+  document.getElementById('kissBtn').addEventListener('click', () => {
+    reaction.textContent = 'Mwahhh! 😘💋 Catch these kisses, Shonu! ❤️';
+    floatingBurst('💋');
+  });
+  document.getElementById('hugBtn').addEventListener('click', () => {
+    reaction.textContent = 'The biggest, warmest hug is on its way! 🫂💕 Imagine me squeezing you tight.';
+    floatingBurst('💗');
+  });
+  function floatingBurst(symbol) {
+    for(let i=0;i<14;i++){
+      const el=document.createElement('span');
+      el.textContent=symbol;
+      el.style.cssText=`position:fixed;left:${10+Math.random()*80}%;top:${45+Math.random()*25}%;font-size:${20+Math.random()*22}px;z-index:11;pointer-events:none;transition:all 1.2s ease-out;`;
+      document.body.appendChild(el);
+      requestAnimationFrame(()=>{el.style.transform=`translate(${(Math.random()-.5)*180}px,${-100-Math.random()*180}px) rotate(${Math.random()*50-25}deg)`;el.style.opacity='0';});
+      setTimeout(()=>el.remove(),1300);
+    }
+  }
+
+  // Birthday cake.
+  const cake = document.getElementById('cake');
+  const wishBtn = document.getElementById('wishBtn');
+  const wishText = document.getElementById('wishText');
+  function blowCandle(){
+    cake.classList.add('blown');
+    wishText.textContent = 'Wish made! May this year bring you love, peace, success, and all the happiness you deserve. 🎉❤️';
+    wishBtn.textContent = 'Celebrate again! 🎊';
+    burstConfetti(130);
+  }
+  cake.addEventListener('click', blowCandle);
+  cake.addEventListener('keydown', e => {if(e.key==='Enter'||e.key===' '){e.preventDefault();blowCandle();}});
+  wishBtn.addEventListener('click', () => {
+    cake.classList.remove('blown');
+    wishText.textContent = 'Close your eyes and make a wish, birthday boy. ✨';
+    wishBtn.textContent = 'Blow the candle & celebrate! 🎉';
+    setTimeout(blowCandle, 250);
+  });
+
+  function burstConfetti(amount) {
+    const colors = ['#ffd58a','#ff7897','#fff0f2','#e73e65','#ffffff'];
+    for(let i=0;i<amount;i++){
+      const bit=document.createElement('i');
+      bit.className='confetti';
+      bit.style.left=Math.random()*100+'vw';
+      bit.style.background=colors[Math.floor(Math.random()*colors.length)];
+      bit.style.borderRadius=Math.random()>.5?'50%':'2px';
+      bit.style.animationDuration=(2.5+Math.random()*3)+'s';
+      bit.style.animationDelay=(Math.random()*.8)+'s';
+      document.body.appendChild(bit);
+      setTimeout(()=>bit.remove(),6500);
+    }
+  }
+</script>
+</body>
+</html>
